@@ -18,3 +18,5 @@
 
 # Why to follow this structure ?
 - Because this will saparate all the logic and the main factor is code complexity. I would suggest to use this flatten structure for neat and clean code. 
+
+I would suggest to use https://github.com/kisstkondoros/codemetrics this plugin for development. Your code complexity should not exceed to 10. 
