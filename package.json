@@ -1,0 +1,26 @@
+{
+  "name": "node_postgresql_structure",
+  "version": "0.0.0",
+  "description": "Backend repo architechture for nodejs + expressjs + postgressql database",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "postgresql",
+    "expressjs",
+    "restapi"
+  ],
+  "author": "Vipul Panchal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-status-codes": "^1.4.0",
+    "pg": "^7.18.2",
+    "serverless-http": "^2.3.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.1.2"
+  }
+}

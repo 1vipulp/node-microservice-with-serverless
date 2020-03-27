@@ -1,0 +1,30 @@
+# healthCheck.yml
+
+healthCheckStatus:
+  handler: src/controllers/healthCheck.healthCheckStatus
+  events:
+      - http:
+          path: api/
+          method: get
+          package:
+            exclude:
+              - "**/**"
+            include: 
+              - node_modules/**
+              - serverless.yml
+          cors:
+            origin: '*'
+            headers: 
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Startlower
+              - Text
+              - Access-Control-Allow-Headers
+              - Access-Control-Allow-Origin
+              - signature
+              - channel
+              - userId
