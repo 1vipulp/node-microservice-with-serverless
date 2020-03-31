@@ -3,34 +3,15 @@ service: JWT-Module
 plugins:
   - serverless-offline
 
-# Interval can be hours, week, days, months, year
-
 provider:
   name: aws
   runtime: nodejs12.x
   region: us-east-1
-  environment: 
-    TOKEN_EXPIRY_ANDROID: '1 hours'
-    TOKEN_EXPIRY_IOS: '2 hours'
-    TOKEN_EXPIRY_WEB: '3 days'
-
-# functions:
-#   - ${file(src/routes/healthCheck.yml)}
+  environment:
+    foo: bar
 
 functions:
-  nodePostgresqlService:
-    handler: src/app.handler
-    events:
-      - http:
-          path: api/
-          method: get
-      - http:
-          path: api/serviceStatus
-          method: get
-      - http:
-          path: api/doc
-          method: get
+  - ${file(src/routes/healthCheck.yml)}
 
-# define all API routes here
 
   
